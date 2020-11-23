@@ -51,49 +51,7 @@ session_start();
 		mysqli_query($db, "DELETE FROM tasks WHERE id=".$id);
 		header('location: index.php');
 	}	
-	
-// if (isset($_POST['update'])) {
-// 	$id = $_POST['id'];
 
-// 	$name = $_FILES['file_']['name'];
-//         $target_dir = "upload/";
-// 		$target_file = $target_dir . basename($_FILES["file_"]["name"]);
-		
-// 		$task = $_POST['task'];
-// 		  // Select file type
-// 		  $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-
-// 		  // Valid file extensions
-// 		  $extensions_arr = array("jpg","jpeg","png","gif");
-
-//     if( in_array($imageFileType,$extensions_arr) ){
-// 		  // Convert to base64 
-// 		  $image_base64 = base64_encode(file_get_contents($_FILES['file_']['tmp_name']) );
-// 		  $image = 'data:image/'.$imageFileType.';base64,'.$image_base64;
-// //print_r($task);
-// 	mysqli_query($db, "UPDATE tasks SET task='$task',name='$name',image='$image' WHERE id=$id");
-//  // Upload file
-//  move_uploaded_file($_FILES['file_']['tmp_name'],'upload/'.$name);
-
-// 	header('location: index.php');
-// 	}
-// }
-// 	if (isset($_GET['edit_task'])) {
-// 		$id = $_GET['edit_task'];	
-// 		$update = true;
-// 		$record = mysqli_query($db, "SELECT * FROM tasks WHERE id=".$id);
-	
-// 		if ($record) {
-// 			$n = mysqli_fetch_array($record);
-// 			$task = $n['task'];
-// 			$name=$n['name'];
-// 		} else {
-// 			// UPDATE failed
-// 			echo mysqli_error($db);
-// 			db_disconnect($db);
-// 			exit;
-// 		  }
-// 	}
 	
 if (isset($_POST['update'])) {
 	$id = $_POST['id'];
